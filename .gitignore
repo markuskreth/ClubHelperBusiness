@@ -15,6 +15,9 @@ gen/
 local.properties
 src/test.properties
 
+# Mobile Tools for Java (J2ME)
+.mtj.tmp/
+
 # Eclipse project files
 .classpath
 .project
@@ -32,6 +35,8 @@ proguard/
 *.gz
 *.iso
 *.jar
+*.war
+*.ear
 *.rar
 *.tar
 *.zip
@@ -41,6 +46,9 @@ proguard/
 *.log
 *.sql
 *.sqlite
+
+# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+hs_err_pid*
 
 # OS generated files #
 ######################

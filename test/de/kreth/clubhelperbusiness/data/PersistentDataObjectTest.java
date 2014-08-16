@@ -17,10 +17,18 @@ public class PersistentDataObjectTest extends TestCase {
 
 	public void testGetId() {
 		TestDataObject data = new TestDataObject();
-		assertTrue(data.getId()<0);
+		long firstDataId = data.getId();
+		assertTrue(firstDataId<0);
+		assertFalse(data.isPersistent());
+		
+		data = new TestDataObject();
+		long secondDataId = data.getId();
+		assertTrue(secondDataId<firstDataId);
+		assertFalse(data.isPersistent());
+		
 		data = new TestDataObject(5);
 		assertEquals(5, data.getId());
-		
+		assertTrue(data.isPersistent());
 	}
 
 	public void testPersonId () {

@@ -20,6 +20,11 @@ public class Person extends PersistentDataObject {
 		this.birthdate = toClone.getBirthdate();
 	}
 
+	/**
+	 * Nicht persistentes objekt wird mit neuer id versehen. Id muss >0 sein und primary key in Datenbank sein.
+	 * @param toClone vorheriges, nicht-persistentes Objekt.
+	 * @param id
+	 */
 	public Person(Person toClone, long id){
 		super(id);
 		this.preName = toClone.preName;

@@ -11,14 +11,17 @@ public abstract class PersistentDataObject {
 	private static int nextUnpersistentId = -1;
 	private long _id;
 
+	/**
+	 * For not persistent data objects, creation of new data to be stored
+	 */
 	public PersistentDataObject() {
 		super();
 		_id = nextUnpersistentId--;
 	}
 	
 	/**
-	 * 
-	 * @param insertId
+	 * Für persistente Objekte (laden existierender Datenobjekte)
+	 * @param insertId	>0
 	 */
 	public PersistentDataObject(long insertId) {
 		super();
